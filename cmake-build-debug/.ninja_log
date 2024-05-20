@@ -1,0 +1,8 @@
+# ninja log v5
+0	1558	1716206343854086102	CMakeFiles/tetris_sfml.dir/src/Board.cpp.o	451254c9bd1e7126
+1	1567	1716206343862684631	CMakeFiles/tetris_sfml.dir/src/Piece.cpp.o	d2354b5aad2a6780
+1	1667	1716206343964265280	CMakeFiles/tetris_sfml.dir/src/Game.cpp.o	babecfb8bef9497e
+1	1565	1716206343861645684	CMakeFiles/tetris_sfml.dir/src/main.cpp.o	8ff6a385bdb09e34
+21	280	1716206424358293079	tetris_sfml	f1e6a1dafd7bc3d3
+2	478	1716206342774659578	CMakeFiles/tetris_sfml.dir/src/Utils.cpp.o	6af8f6aa6ae4bdba
+1	72	1716206434359508536	build.ninja	9f24fe23819f2be3
