@@ -27,7 +27,8 @@ Gra Tetris polega na układaniu spadających klocków w taki sposób, aby wypeł
 3. Uruchom program:
   ./tetris
 
-Autor:
+## Autor:
 Karol Łempicki
-Program utworzony na potrzeby zaliczenia zajęć laboratoryjnych/projektu Programowanie Obiektowe.
+
+## Program utworzony na potrzeby zaliczenia zajęć laboratoryjnych/projektu Programowanie Obiektowe.
 
