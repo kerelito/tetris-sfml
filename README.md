@@ -12,6 +12,7 @@ Gra Tetris polega na układaniu spadających klocków w taki sposób, aby wypeł
 
 - Kompilator C++ (np. g++)
 - Biblioteka SFML (https://www.sfml-dev.org/)
+- CMake (https://cmake.org/)
 
 ### Kompilacja
 
@@ -20,10 +21,8 @@ Gra Tetris polega na układaniu spadających klocków w taki sposób, aby wypeł
    git clone https://github.com/TwojeRepozytorium/tetris-sfml.git
    cd tetris-sfml
    
-2. Skompiluj projekt:
-  ```bash
-    g++ -std=c++11 -o tetris main.cpp Game.cpp Board.cpp Piece.cpp Utils.cpp -lsfml-graphics -lsfml-window -lsfml-system
-  ```
+2. Upewnij się, że plik CMakeLists.txt znajduje się w katalogu.
+
 3. Uruchom program:
   ./tetris
 
