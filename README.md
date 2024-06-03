@@ -31,3 +31,4 @@ Karol Łempicki
 
 ## Program utworzony na potrzeby zaliczenia zajęć laboratoryjnych/projektu Programowanie Obiektowe.
 
+![Diagram](https://github.com/kerelito/tetris-sfml/assets/68667857/54e7956c-b240-4206-8b78-f15c112b1bdc)
