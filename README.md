@@ -30,3 +30,5 @@ Gra Tetris polega na układaniu spadających klocków w taki sposób, aby wypeł
 Karol Łempicki
 
 ## Program utworzony na potrzeby zaliczenia zajęć laboratoryjnych/projektu Programowanie Obiektowe.
+
+![Diagram bez tytułu drawio](https://github.com/kerelito/tetris-sfml/assets/68667857/7fc363a5-4e8b-45ec-add4-b2fc522303b0)
