@@ -3,10 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 
-/**
- * @brief Konstruktor klasy Piece. Inicjalizuje kształt i pozycję klocka.
- * @param type Typ klocka (0-6).
- */
 Piece::Piece(int type) : mPosition(3, 0) {
     mShape.setSize(sf::Vector2f(30, 30));
     setShape(type);
@@ -31,10 +27,6 @@ Piece::Piece(int type) : mPosition(3, 0) {
     mColor = colors[std::rand() % (sizeof(colors) / sizeof(colors[0]))];
 }
 
-/**
- * @brief Rysuje klocek na podanym oknie.
- * @param window Okno SFML, na którym rysowany jest klocek.
- */
 void Piece::draw(sf::RenderWindow& window) {
     for (int x = 0; x < SIZE; ++x) {
         for (int y = 0; y < SIZE; ++y) {
@@ -47,13 +39,6 @@ void Piece::draw(sf::RenderWindow& window) {
     }
 }
 
-/**
- * @brief Przesuwa klocek o podane wartości.
- * @param dx Przesunięcie w osi X.
- * @param dy Przesunięcie w osi Y.
- * @param board Plansza gry.
- * @return true, jeśli przesunięcie się powiodło, false w przeciwnym razie.
- */
 bool Piece::move(int dx, int dy, const Board& board) {
     mPosition.x += dx;
     mPosition.y += dy;
@@ -67,10 +52,6 @@ bool Piece::move(int dx, int dy, const Board& board) {
     return true;
 }
 
-/**
- * @brief Obraca klocek.
- * @param board Plansza gry.
- */
 void Piece::rotate(const Board& board) {
     int tmp[SIZE][SIZE];
     for (int x = 0; x < SIZE; ++x) {
@@ -86,10 +67,6 @@ void Piece::rotate(const Board& board) {
     }
 }
 
-/**
- * @brief Ustawia kształt klocka na podstawie jego typu.
- * @param type Typ klocka (0-6).
- */
 void Piece::setShape(int type) {
     static const int shapes[7][SIZE][SIZE] = {
             { {1, 1, 1, 1}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0} }, // I

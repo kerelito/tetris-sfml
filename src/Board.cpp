@@ -1,9 +1,6 @@
 #include "Board.h"
 #include "Piece.h"
 
-/**
- * @brief Konstruktor klasy Board. Inicjalizuje siatkę i granice planszy.
- */
 Board::Board() {
     for (int x = 0; x < WIDTH; ++x) {
         for (int y = 0; y < HEIGHT; ++y) {
@@ -19,10 +16,6 @@ Board::Board() {
     mBlock.setSize(sf::Vector2f(30, 30));
 }
 
-/**
- * @brief Rysuje planszę na podanym oknie.
- * @param window Okno SFML, na którym rysowana jest plansza.
- */
 void Board::draw(sf::RenderWindow& window) {
     window.draw(mBorders);
     for (int x = 0; x < WIDTH; ++x) {
@@ -36,11 +29,6 @@ void Board::draw(sf::RenderWindow& window) {
     }
 }
 
-/**
- * @brief Sprawdza, czy dany klocek koliduje z blokami na planszy.
- * @param piece Klocek do sprawdzenia.
- * @return true, jeśli występuje kolizja, false w przeciwnym razie.
- */
 bool Board::isCollision(const Piece& piece) const {
     for (int x = 0; x < Piece::SIZE; ++x) {
         for (int y = 0; y < Piece::SIZE; ++y) {
@@ -56,10 +44,6 @@ bool Board::isCollision(const Piece& piece) const {
     return false;
 }
 
-/**
- * @brief Łączy klocek z planszą, dodając jego bloki do siatki.
- * @param piece Klocek do dodania.
- */
 void Board::mergePiece(const Piece& piece) {
     for (int x = 0; x < Piece::SIZE; ++x) {
         for (int y = 0; y < Piece::SIZE; ++y) {
@@ -70,10 +54,6 @@ void Board::mergePiece(const Piece& piece) {
     }
 }
 
-/**
- * @brief Usuwa pełne linie z planszy i aktualizuje wynik.
- * @param score Aktualny wynik gry.
- */
 void Board::clearLines(int& score) {
     for (int y = HEIGHT - 1; y >= 0; --y) {
         bool isLineFull = true;

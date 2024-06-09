@@ -1,9 +1,6 @@
 #include "Game.h"
-#include <iostream> // Dodaj include dla std::cerr
+#include <iostream>
 
-/**
- * @brief Konstruktor klasy Game. Inicjalizuje wszystkie zmienne.
- */
 Game::Game()
         : mWindow(sf::VideoMode(1920, 1080), "Tetris SFML"), mBoard(), mCurrentPiece(Utils::getRandomNumber(0, 6)),
           mNextPiece(Utils::getRandomNumber(0, 6)), mIsMovingLeft(false), mIsMovingRight(false), mIsRotating(false),
@@ -33,9 +30,6 @@ Game::Game()
     mAuthorText.setString("Autor: Karol Lempicki");
 }
 
-/**
- * @brief Uruchamia główną pętlę gry.
- */
 void Game::run() {
     sf::Clock clock;
     while (mWindow.isOpen()) {
@@ -46,9 +40,6 @@ void Game::run() {
     }
 }
 
-/**
- * @brief Przetwarza zdarzenia wejściowe gracza.
- */
 void Game::processEvents() {
     sf::Event event;
     while (mWindow.pollEvent(event)) {
@@ -66,9 +57,6 @@ void Game::processEvents() {
     }
 }
 
-/**
- * @brief Aktualizuje stan gry.
- */
 void Game::update() {
     if (mGameOver) return;
 
@@ -104,9 +92,6 @@ void Game::update() {
     mScoreText.setString("Wynik: " + std::to_string(mScore));
 }
 
-/**
- * @brief Renderuje wszystkie elementy gry.
- */
 void Game::render() {
     mWindow.clear();
     mBoard.draw(mWindow);
@@ -119,11 +104,6 @@ void Game::render() {
     mWindow.display();
 }
 
-/**
- * @brief Obsługuje wejście klawiatury gracza.
- * @param key Klawisz wciśnięty przez gracza.
- * @param isPressed Określa, czy klawisz jest wciśnięty.
- */
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed) {
     if (key == sf::Keyboard::Left) {
         mIsMovingLeft = isPressed;
