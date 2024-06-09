@@ -18,7 +18,7 @@ Gra Tetris polega na układaniu spadających klocków w taki sposób, aby wypeł
 
 1. Pobierz repozytorium:
    ```bash
-   git clone https://github.com/TwojeRepozytorium/tetris-sfml.git
+   git clone https://github.com/kerelito/tetris-sfml.git
    cd tetris-sfml
    
 2. Upewnij się, że główny plik CMakeLists.txt, jak i CMakeLists.txt zlokalizowany w katalogu src, znajdują się w katalogu.
